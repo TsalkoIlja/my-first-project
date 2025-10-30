@@ -1,49 +1,39 @@
-﻿namespace switchMultiple
+﻿namespace SwitchMethodCall
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            //sisestad konsooli väärtuse
-            //loeb sisestatud vüürtuse stringina
-            //tuleb kasutada switchi
-
-            //esimeses cases on väärtused "Intro to C#", "Variables",
-            //"Date Types" ja vastuseks Basic
-
-            //teises cases on vääärtused "OOP", "Classes",
-            //"objects" ja vastuseks Intermediate
-
-            //kolmandas cases on väärtused "Ancynchrouns Programming", "LINQ",
-            //"Delegates" ja vastuseks Advanced
-            Console.WriteLine("Sisesta vüäärtus");
+            //teha switch rakendus,
+            //kus kasutaja sisestab sõiduki tüübi (coupe või truck)
+            //ja programm kutsub vastava meetodi (CarCoupe või Truck)
+            Console.WriteLine("Sisesta väärtus");
             string input = Console.ReadLine();
+
             switch (input)
             {
-                case "Intro to C#":
-                case "variables":
-                case "Date types":
-
-                    Console.WriteLine("Basic");
+                case "CarCoupe":
+                    //kutsu meetod välja
+                    CarCoupe();
                     break;
-                case "OOP":
-                case "Classes":
-                case "Object":
-
-                    Console.WriteLine("intermediate");
+                case "Truck":
+                    //kutsu meetod välja
+                    Truck();
                     break;
-                case "Ancynchrouns Programming":
-                case "LINQ":
-                case "Delegates":
-
-                    Console.WriteLine("Advanced");
+                default:
+                    Console.WriteLine("asd");
                     break;
-
-
-
-
             }
+        }
+
+        static void CarCoupe()
+        {
+            Console.WriteLine("You have a coupe car");
+        }
+
+        static void Truck()
+        {
+            Console.WriteLine("You have a truck");
         }
     }
 }
