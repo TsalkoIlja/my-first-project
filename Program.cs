@@ -1,39 +1,41 @@
-﻿namespace SwitchMethodCall
+﻿namespace SwitchMultipleCases
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //teha switch rakendus,
-            //kus kasutaja sisestab sõiduki tüübi (coupe või truck)
-            //ja programm kutsub vastava meetodi (CarCoupe või Truck)
-            Console.WriteLine("Sisesta väärtus");
+            //sisestad konsooli väärtuse
+            //loeb sisestatud väärtuse stringina
             string input = Console.ReadLine();
 
+            //tuleb kasutada switchi
             switch (input)
             {
-                case "CarCoupe":
-                    //kutsu meetod välja
-                    CarCoupe();
+                //esimeses cases on väärtused "Intro to C#", "Variables",
+                //"Data Types" ja vastuseks Basic
+                case "Intro to C#" or "Variables" or "Data Types":
+                    Console.WriteLine("Basic");
                     break;
-                case "Truck":
-                    //kutsu meetod välja
-                    Truck();
+
+                //teises cases on väärtused "OOP", "Classes",
+                //"Objects" ja vastuseks Intermediate
+                case "OOP" or "Classes" or "Objects":
+                    Console.WriteLine("Intermediate");
                     break;
+
+                //kolmandas cases on väärtused "Asynchronous Programming", "LINQ",
+                //"Delegates" ja vastuseks Advanced
+                //teine variant
+                case "Asynchronous Programming":
+                case "LINQ":
+                case "Delegates":
+                    Console.WriteLine("Advanced");
+                    break;
+
                 default:
-                    Console.WriteLine("asd");
+                    Console.WriteLine("Unknown level");
                     break;
             }
-        }
-
-        static void CarCoupe()
-        {
-            Console.WriteLine("You have a coupe car");
-        }
-
-        static void Truck()
-        {
-            Console.WriteLine("You have a truck");
         }
     }
 }
