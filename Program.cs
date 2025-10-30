@@ -1,41 +1,30 @@
-﻿namespace SwitchMultipleCases
+﻿namespace SwitchNumbers
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //sisestad konsooli väärtuse
-            //loeb sisestatud väärtuse stringina
-            string input = Console.ReadLine();
-
-            //tuleb kasutada switchi
-            switch (input)
+            Console.WriteLine("Sisesta number");
+            //peab saama sisestada numbrit ja muudab selle int andmetüübiks
+            int number = Convert.ToInt32(Console.ReadLine());
+            //tuleb teha switch, kus on esimene case 10, teine on 20 ja kolmas on 30
+            //kindlasti tuleb ka default lõppu teha
+            switch (number)
             {
-                //esimeses cases on väärtused "Intro to C#", "Variables",
-                //"Data Types" ja vastuseks Basic
-                case "Intro to C#" or "Variables" or "Data Types":
-                    Console.WriteLine("Basic");
+                case 10:
+                    Console.WriteLine("Sisestasid 10");
                     break;
-
-                //teises cases on väärtused "OOP", "Classes",
-                //"Objects" ja vastuseks Intermediate
-                case "OOP" or "Classes" or "Objects":
-                    Console.WriteLine("Intermediate");
+                case 20:
+                    Console.WriteLine("Sisestasid 20");
                     break;
-
-                //kolmandas cases on väärtused "Asynchronous Programming", "LINQ",
-                //"Delegates" ja vastuseks Advanced
-                //teine variant
-                case "Asynchronous Programming":
-                case "LINQ":
-                case "Delegates":
-                    Console.WriteLine("Advanced");
+                case 30:
+                    Console.WriteLine("Sisestasid 30");
                     break;
-
                 default:
-                    Console.WriteLine("Unknown level");
+                    Console.WriteLine("Sisestasid mingi muu numbri");
                     break;
             }
+
         }
     }
 }
