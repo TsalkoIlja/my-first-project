@@ -1,30 +1,39 @@
-﻿namespace SwitchNumbers
+﻿namespace SwitchMethodCall
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sisesta number");
-            //peab saama sisestada numbrit ja muudab selle int andmetüübiks
-            int number = Convert.ToInt32(Console.ReadLine());
-            //tuleb teha switch, kus on esimene case 10, teine on 20 ja kolmas on 30
-            //kindlasti tuleb ka default lõppu teha
-            switch (number)
+            //teha switch rakendus,
+            //kus kasutaja sisestab sõiduki tüübi (coupe või truck)
+            //ja programm kutsub vastava meetodi (CarCoupe või Truck)
+            Console.WriteLine("Sisesta väärtus");
+            string input = Console.ReadLine();
+
+            switch (input)
             {
-                case 10:
-                    Console.WriteLine("Sisestasid 10");
+                case "CarCoupe":
+                    //kutsu meetod välja
+                    CarCoupe();
                     break;
-                case 20:
-                    Console.WriteLine("Sisestasid 20");
-                    break;
-                case 30:
-                    Console.WriteLine("Sisestasid 30");
+                case "Truck":
+                    //kutsu meetod välja
+                    Truck();
                     break;
                 default:
-                    Console.WriteLine("Sisestasid mingi muu numbri");
+                    Console.WriteLine("asd");
                     break;
             }
+        }
 
+        static void CarCoupe()
+        {
+            Console.WriteLine("You have a coupe car");
+        }
+
+        static void Truck()
+        {
+            Console.WriteLine("You have a truck");
         }
     }
 }
