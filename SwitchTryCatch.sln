@@ -1,0 +1,79 @@
+﻿namespace SwitchTryCatch
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Try Catch koos Switch-ga");
+
+            //alguses teha switchi kus saab sisestada numbreid 1 ja 2
+            try
+            {
+                
+
+                
+                int input = int.Parse(Console.ReadLine());
+
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("Sisestasid number 1");
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Sisestasid number 2");
+                        break;
+
+                    default:
+                        Console.WriteLine("Wrong Number");
+                        break;
+
+
+                }
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Palun sisesta kehtiv number.");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Sisestatud number on liiga suur või liiga väike.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Tekkis ootamatu viga");
+            }
+        }
+    }
+
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+       
+
+
+
+    
+    
