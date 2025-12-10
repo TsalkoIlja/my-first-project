@@ -13,7 +13,7 @@
 
 
 
-            for (i = 0;i < 10 ; i++ )
+            for (i = 0; i < 10 ; i++ )
             {
                 Console.WriteLine("Rida" + (i + 1));
                 if (i == 9)
@@ -25,4 +25,5 @@
         }
     }
 }
+
 
