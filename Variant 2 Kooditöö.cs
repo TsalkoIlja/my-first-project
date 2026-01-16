@@ -37,10 +37,10 @@ namespace Variant_2
         {
             int i, j, n;
 
-            Console.Write("Loo romb tärnidest: \n");
+            Console.Write("Loo tärnidest: \n");
             Console.Write("----------------------");
             Console.Write("\n\n");
-            Console.WriteLine("Sisesta rombi suurus");
+            Console.WriteLine("Sisesta suurus");
             n = Convert.ToInt32(Console.ReadLine());
 
             for (i = 0; i <= n; i++)
@@ -121,6 +121,7 @@ namespace Variant_2
     }
     
 }
+
 
 
 
