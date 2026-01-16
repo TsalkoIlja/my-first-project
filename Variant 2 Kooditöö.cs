@@ -37,7 +37,7 @@ namespace Variant_2
         {
             int i, j, n;
 
-            Console.Write("Loo tärnidest: \n");
+            Console.Write("Loo püramiid tärnidest: \n");
             Console.Write("----------------------");
             Console.Write("\n\n");
             Console.WriteLine("Sisesta suurus");
@@ -121,6 +121,7 @@ namespace Variant_2
     }
     
 }
+
 
 
 
