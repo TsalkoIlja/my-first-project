@@ -118,9 +118,9 @@ namespace Variant_2
                 $"x2 = {(-p + Math.Sqrt(y)) / (2 * a)}");
         }
 
-
     }
 }
+
 
 
 
