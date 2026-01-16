@@ -112,7 +112,7 @@ namespace Variant_2
             Console.Write("Sisesta x väärtus ");
             double x = double.Parse(Console.ReadLine());
 
-            double y = a * (x - p) * (x - p) + q;
+            double y = a * (x * x - 2 * x * p + p * p) + q;
 
             Console.WriteLine($"x1 = {(-p + Math.Sqrt(y)) / (2 * a)}, " +
                 $"x2 = {(-p + Math.Sqrt(y)) / (2 * a)}");
@@ -121,6 +121,7 @@ namespace Variant_2
     }
     
 }
+
 
 
 
